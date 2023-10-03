@@ -56,3 +56,8 @@ Para lanzar los test:
 - Contiene tests unitarios.
 - Código SOLID filtrado con EsLint salvo algunas excepciones.
 - Disponbible sin conexión.
+
+## Documentación exhaustiva
+
+- Ver la [documentación acerca](https://app.gitbook.com/o/f6sc898kolNIxiLAEsFn/s/ZkSp7jFGr2u2Ev4xSokA/) del proceso de desarrollo.
+

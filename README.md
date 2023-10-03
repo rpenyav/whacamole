@@ -4,9 +4,9 @@ Progressive Web App (PWA) del juego Whac-A-Mole. Te permite jugar al juego de go
 
 ## Características
 
-Soporte para dispositivos móviles y navegadores web.
-3 niveles de dificultad.
-Tiempo límite de 2 minutos.
+- Soporte para dispositivos móviles y navegadores web.
+- 3 niveles de dificultad.
+- Tiempo límite de 2 minutos.
 
 ## Demo
 Para probar la PWA aquí. Se encuentra alojada en Render Server.
@@ -14,8 +14,8 @@ Para probar la PWA aquí. Se encuentra alojada en Render Server.
 ## Capturas de Pantalla
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_33_58-Wac-a-mole.png" alt="Home Page" height="400">
-  <img src="https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_34_16-Wac-a-mole.png" alt="Game Page" height="400">
+  <img src="https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_33_58-Wac-a-mole.png" alt="Home Page" height="450">
+  <img src="https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_34_16-Wac-a-mole.png" alt="Game Page" height="450">
 </div>
 
 
@@ -32,6 +32,7 @@ y
 Para testear las características PWA en localhost, realizar la build del proyecto y arrancar. Para ello:
 
 `` npm run build `` 
+
 y
 
 `` serve -s build `` 

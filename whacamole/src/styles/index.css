@@ -1,0 +1,196 @@
+/* Variables */
+:root {
+  --font-size: 16px;
+}
+
+/* Base Styles */
+body {
+  font-size: var(--font-size);
+  font-family: "Roboto", sans-serif;
+}
+
+/* Typography */
+.jumbo-title {
+  font-family: "Bungee Spice", cursive;
+  font-size: 3rem;
+}
+
+.name-user {
+  font-family: "Bungee Spice", cursive;
+}
+
+.time-left.warning {
+  color: red;
+}
+
+/* Layout */
+.verticality {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.verticality > :nth-child(2) {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.verticality > :nth-child(3) {
+  background-color: #000;
+  color: #ffffff;
+  padding-top: 10px;
+  margin-top: auto;
+}
+
+.back-topo {
+  background-image: var(--background-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 500px;
+  text-align: center;
+  padding-top: 55%;
+}
+
+.back-flowers {
+  position: relative;
+}
+
+.back-flowers::before {
+  content: "";
+  background-image: var(--background-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.mole-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.mole-cell {
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+}
+
+/* Buttons */
+.button-rounded {
+  color: white;
+  border-radius: 82px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 2px 2px 6px #707070;
+}
+
+.button-home {
+  background-color: #ff4500;
+}
+
+.orange-home {
+  color: #ff4500;
+}
+
+.button-low {
+  background-color: #77ee6c;
+}
+
+.button-mid {
+  background-color: #6ad6f1;
+}
+
+.button-hard {
+  background-color: #eb4b3f;
+}
+
+.botonera {
+  margin-bottom: 150px;
+}
+
+/* Button States */
+.button-rounded:hover {
+  background-color: #040433;
+  box-shadow: 0px 0px 0px #5e5e5e;
+}
+
+.icon-exit {
+  height: 20px;
+}
+
+.button-rounded:disabled {
+  background-color: #ccc;
+  color: #888;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.active-button {
+  background-color: #1f1f22;
+  box-shadow: 0px 0px 0px #5e5e5e;
+}
+
+/* Transitions */
+.fade-enter,
+.fade-exit-active {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-enter-active,
+.fade-exit-active,
+.slide-enter-active,
+.slide-exit-active {
+  transition: opacity 300ms;
+}
+
+.slide-enter,
+.slide-exit-active {
+  transform: translateX(100%);
+}
+
+.slide-enter-active,
+.slide-exit {
+  transform: translateX(0);
+}
+
+.agujero {
+  width: 60px;
+}
+
+.topo {
+  width: 60px;
+  transition: filter 0.15s ease;
+}
+
+.topoactivo {
+  filter: invert(100%) !important;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  :root {
+    --font-size: 14px;
+  }
+}

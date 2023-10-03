@@ -45,6 +45,7 @@ Para lanzar los test:
 
 `` npm run test `` 
 
+Nota sobre los test: el test del hook **useGameLogic.ts** produce un warning: **Warning: ReactDOM.render is no longer supported in React 18.** pero la batería de test es positiva. Esto es debido a que react-hooks para RTL está aún en desarrollo. 
 
 ## Stack Tecnológico
 

@@ -132,6 +132,7 @@ const useGameLogic = () => {
     toggleMole,
     toggleGamePause,
     timeLeft,
+    resetGame,
   };
 };
 

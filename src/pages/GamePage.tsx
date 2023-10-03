@@ -27,7 +27,7 @@ const GamePage: FC = () => {
 
   return (
     <Layout>
-      <h3 data-testid="welcome-message">
+      <h3 className="mt-4" data-testid="welcome-message">
         Welcome, <span className="name-user">{userName}</span>
       </h3>
       <DifficultySelector

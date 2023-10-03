@@ -4,18 +4,19 @@ Progressive Web App (PWA) del juego Whac-A-Mole. Te permite jugar al juego de go
 
 ## Características
 
-Soporte para dispositivos móviles y navegadores web.
-3 niveles de dificultad.
-Tiempo límite de 2 minutos.
+- Soporte para dispositivos móviles y navegadores web.
+- 3 niveles de dificultad.
+- Tiempo límite de 2 minutos.
 
 ## Demo
-Para probar la PWA aquí.
+Para probar la PWA aquí. Se encuentra alojada en Render Server.
 
 ## Capturas de Pantalla
 
-![Home Page](https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_33_58-Wac-a-mole.png)
-![Game Page](https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_34_16-Wac-a-mole.png)
-
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_33_58-Wac-a-mole.png" alt="Home Page" height="450">
+  <img src="https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_34_16-Wac-a-mole.png" alt="Game Page" height="450">
+</div>
 
 
 
@@ -28,16 +29,35 @@ y
 
 `` npm start ``
 
-Para experimentar la user experience, pinchar en enlace. Se encuentra alojada en Render Server.
+Para testear las características PWA en localhost, realizar la build del proyecto y arrancar. Para ello:
+
+`` npm run build `` 
+
+y
+
+`` serve -s build `` 
+
+NOTA: es necesario tener instalado serve:
+
+`` npm install -g serve ``
+
+Para lanzar los test:
+
+`` npm run test `` 
 
 
 ## Stack Tecnológico
 
-Esta PWA se basa en tecnologías web estándar como HTML, CSS y JavaScript.
-Realizada con React (create react app) y service-worker.
-Desarrollada con Typescript.
-Ilustraciones realizadas con programa de vectores Freehand MX y InkScape para los SVG.
-Al arquitectura es modular.
-Contiene tests unitarios.
-Código SOLID filtrado con EsLint salvo algunas excepciones.
-Disponbible sin conexión.
+- Esta PWA se basa en tecnologías web estándar como HTML, CSS y JavaScript.
+- Realizada con React (create react app) y service-worker.
+- Desarrollada con Typescript.
+- Ilustraciones realizadas con programa de vectores Freehand MX y InkScape para los SVG.
+- La arquitectura es modular.
+- Contiene tests unitarios.
+- Código SOLID filtrado con EsLint salvo algunas excepciones.
+- Disponbible sin conexión.
+
+## Documentación exhaustiva
+
+- Ver la [documentación acerca](https://app.gitbook.com/o/f6sc898kolNIxiLAEsFn/s/ZkSp7jFGr2u2Ev4xSokA/) del proceso de desarrollo.
+

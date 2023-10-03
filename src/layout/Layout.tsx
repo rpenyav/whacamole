@@ -37,7 +37,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <div className="verticality back-flowers">
       <header className="bg-dark">
-        <div className="jumbo-title text-center">Wac-A-Mole</div>
+        <div className="jumbo-title text-center">Whac-A-Mole</div>
       </header>
       <main className="text-center">
         <AnimatePresence mode="wait">

@@ -9,12 +9,13 @@ Soporte para dispositivos móviles y navegadores web.
 Tiempo límite de 2 minutos.
 
 ## Demo
-Para probar la PWA aquí.
+Para probar la PWA aquí. Se encuentra alojada en Render Server.
 
 ## Capturas de Pantalla
 
-![Home Page](https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_33_58-Wac-a-mole.png)
-![Game Page](https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_34_16-Wac-a-mole.png)
+<img src="https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_33_58-Wac-a-mole.png" alt="Home Page" width="150">
+<img src="https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_34_16-Wac-a-mole.png" alt="Game Page" width="150">
+
 
 
 
@@ -28,16 +29,15 @@ y
 
 `` npm start ``
 
-Para experimentar la user experience, pinchar en enlace. Se encuentra alojada en Render Server.
 
 
 ## Stack Tecnológico
 
-Esta PWA se basa en tecnologías web estándar como HTML, CSS y JavaScript.
-Realizada con React (create react app) y service-worker.
-Desarrollada con Typescript.
-Ilustraciones realizadas con programa de vectores Freehand MX y InkScape para los SVG.
-Al arquitectura es modular.
-Contiene tests unitarios.
-Código SOLID filtrado con EsLint salvo algunas excepciones.
-Disponbible sin conexión.
+- Esta PWA se basa en tecnologías web estándar como HTML, CSS y JavaScript.
+- Realizada con React (create react app) y service-worker.
+- Desarrollada con Typescript.
+- Ilustraciones realizadas con programa de vectores Freehand MX y InkScape para los SVG.
+- La arquitectura es modular.
+- Contiene tests unitarios.
+- Código SOLID filtrado con EsLint salvo algunas excepciones.
+- Disponbible sin conexión.

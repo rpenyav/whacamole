@@ -1,5 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
-import backgroundImage from "../assets/topo.svg";
+import { FC, useEffect, useState } from "react";
 import { agujero, topogame } from "../assets";
 
 interface MoleProps {

@@ -7,6 +7,7 @@ import { backFlores, exit } from "../assets";
 interface LayoutProps {
   children: ReactNode;
 }
+
 const variants = {
   initial: { x: "100%" },
   enter: {

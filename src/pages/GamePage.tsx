@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import Layout from "../layout/Layout";
 import {
   Grid,
@@ -8,7 +8,6 @@ import {
 } from "../components/index";
 import useGameLogic from "../hooks/useGameLogic";
 import { formatTime } from "../helpers/formatTime";
-import { backFlores } from "../assets";
 
 const GamePage: FC = () => {
   const {

@@ -29,6 +29,20 @@ y
 
 `` npm start ``
 
+Para testear las características PWA en localhost, realizar la build del proyecto y arrancar. Para ello:
+
+`` npm run build `` 
+y
+
+`` serve -s build `` 
+
+NOTA: es necesario tener instalado serve:
+
+`` npm install -g serve ``
+
+Para lanzar los test:
+
+`` npm run test `` 
 
 
 ## Stack Tecnológico

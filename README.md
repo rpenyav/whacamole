@@ -11,12 +11,17 @@ Tiempo límite de 2 minutos.
 ## Demo
 Para probar la PWA aquí.
 
-Capturas de Pantalla
-Captura de Pantalla 1
-Captura de Pantalla 2
+## Capturas de Pantalla
+
+![Home Page](ruta/a/la/2023-10-03 13_33_58-Wac-a-mole.png)
+![Game Page](ruta/a/la/2023-10-03 13_34_16-Wac-a-mole.png)
+
+
+
 
 ## Instalación
 Para visualizar el desarrollo, clonar el repositorio y en el directorio raíz ejecutar
+
 `` npm install ``
 
 y

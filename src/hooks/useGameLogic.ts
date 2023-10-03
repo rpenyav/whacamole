@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Swal from "sweetalert2";
 
 interface DifficultyConfig {
@@ -10,11 +10,6 @@ interface Difficulties {
   [key: string]: DifficultyConfig;
 }
 
-/**
- * Lógica del juego.
- * @returns funciones y valores del juego.
- */
-
 const useGameLogic = () => {
   const userName = localStorage.getItem("userName");
 
@@ -22,7 +17,7 @@ const useGameLogic = () => {
   const [difficulty, setDifficulty] = useState<string>("Bajo");
   const [activeMoleIndex, setActiveMoleIndex] = useState<number>(-1);
   const [isGamePaused, setGamePaused] = useState<boolean>(true);
-  const [timeLeft, setTimeLeft] = useState<number>(120); // 2 minutos en segundos
+  const [timeLeft, setTimeLeft] = useState<number>(120);
 
   const changeDifficulty = (newDifficulty: string) => {
     setDifficulty(newDifficulty);
@@ -46,10 +41,15 @@ const useGameLogic = () => {
 
   const resetGame = () => {
     setScore(0);
-    debugger;
     setTimeLeft(120);
     setGamePaused(false);
   };
+
+  const toggleMoleRef = useRef(toggleMole);
+
+  useEffect(() => {
+    toggleMoleRef.current = toggleMole;
+  }, [toggleMole]);
 
   useEffect(() => {
     let moleTimer: NodeJS.Timeout;
@@ -57,13 +57,12 @@ const useGameLogic = () => {
 
     if (!isGamePaused) {
       moleTimer = setInterval(() => {
-        toggleMole();
+        toggleMoleRef.current();
       }, 1500);
 
       countdownTimer = setInterval(() => {
         setTimeLeft((prevTimeLeft) => {
           if (prevTimeLeft <= 0) {
-            //el juego acaba al llegar a 0
             setGamePaused(true);
             clearInterval(moleTimer);
             clearInterval(countdownTimer);
@@ -75,7 +74,7 @@ const useGameLogic = () => {
               confirmButtonText: "Play again",
             }).then((result) => {
               if (result.isConfirmed) {
-                localStorage.removeItem("gameScore"); //reseteamos el score para empezar de nuevo
+                localStorage.removeItem("gameScore");
                 resetGame();
               }
             });
@@ -89,7 +88,7 @@ const useGameLogic = () => {
       clearInterval(moleTimer);
       clearInterval(countdownTimer);
     };
-  }, [difficulty, isGamePaused, toggleMole]);
+  }, [difficulty, isGamePaused]);
 
   const handleHit = () => {
     const { points } = difficulties[difficulty];

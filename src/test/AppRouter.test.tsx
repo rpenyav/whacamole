@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter, Route } from "react-router-dom";
 import AppRouter from "../router/AppRouter";
 
@@ -18,9 +18,9 @@ describe("AppRouter", () => {
         <AppRouter />
       </MemoryRouter>
     );
-    expect(
-      await screen.findByText("Choose your difficulty level")
-    ).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText(/Start Game/i)).toBeInTheDocument();
+    });
   });
 
   it("should render NoMatchPage at unknown route", async () => {

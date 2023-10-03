@@ -13,8 +13,8 @@ Para probar la PWA aquí.
 
 ## Capturas de Pantalla
 
-![Home Page](ruta/a/la/2023-10-03 13_33_58-Wac-a-mole.png)
-![Game Page](ruta/a/la/2023-10-03 13_34_16-Wac-a-mole.png)
+![Home Page](https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_33_58-Wac-a-mole.png)
+![Game Page](https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_34_16-Wac-a-mole.png)
 
 
 

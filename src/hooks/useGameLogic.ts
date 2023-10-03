@@ -89,7 +89,7 @@ const useGameLogic = () => {
       clearInterval(moleTimer);
       clearInterval(countdownTimer);
     };
-  }, [difficulty, isGamePaused]);
+  }, [difficulty, isGamePaused, toggleMole]);
 
   const handleHit = () => {
     const { points } = difficulties[difficulty];
@@ -132,6 +132,7 @@ const useGameLogic = () => {
     toggleMole,
     toggleGamePause,
     timeLeft,
+    resetGame,
   };
 };
 

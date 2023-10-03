@@ -14,8 +14,8 @@ Para probar la PWA aquí. Se encuentra alojada en Render Server.
 ## Capturas de Pantalla
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_33_58-Wac-a-mole.png" alt="Home Page" width="250">
-  <img src="https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_34_16-Wac-a-mole.png" alt="Game Page" width="250">
+  <img src="https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_33_58-Wac-a-mole.png" alt="Home Page" height="400">
+  <img src="https://github.com/rpenyav/whacamole/blob/main/2023-10-03%2013_34_16-Wac-a-mole.png" alt="Game Page" height="400">
 </div>
 
 

@@ -1,5 +1,6 @@
 import { useMutation } from "react-query";
-import axios from "axios";
+
+import { axiosInstance } from "../database/axiosInstance";
 
 export interface ScoreData {
   userName: string;
@@ -8,7 +9,7 @@ export interface ScoreData {
 
 export const useManageScore = () => {
   const updateScoreMutation = useMutation((newData: ScoreData) =>
-    axios.post("/score", newData)
+    axiosInstance.post("/score", newData)
   );
 
   return {

@@ -139,6 +139,24 @@ body {
   margin-bottom: 150px;
 }
 
+.pintetpointer {
+  cursor: pointer;
+}
+.cont-button {
+  width: 100%;
+}
+
+@media only screen and (min-width: 451px) {
+  .botonera {
+    margin-bottom: 150px;
+    width: 400px;
+    margin: 0 auto;
+  }
+  .cont-button {
+    width: 200px;
+  }
+}
+
 /* Button States */
 .button-rounded:hover {
   background-color: #040433;

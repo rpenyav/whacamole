@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import Layout from "../layout/Layout";
 import {
   Grid,
@@ -8,8 +8,18 @@ import {
 } from "../components/index";
 import useGameLogic from "../hooks/useGameLogic";
 import { formatTime } from "../helpers/formatTime";
+import { useNavigate } from "react-router-dom";
 
 const GamePage: FC = () => {
+  const user = localStorage.getItem("userName");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user === null || user === "") {
+      navigate("/");
+    }
+  }, [user, navigate]);
+
   const {
     userName,
     score,

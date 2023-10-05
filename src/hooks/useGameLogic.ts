@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 interface DifficultyConfig {
@@ -94,7 +95,7 @@ const useGameLogic = () => {
     const { points } = difficulties[difficulty];
     setScore((prevScore) => {
       const newScore = prevScore + points;
-      localStorage.setItem("gameScore", newScore.toString());
+      // localStorage.setItem("gameScore", newScore.toString());
       return newScore;
     });
   };

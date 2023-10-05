@@ -11,7 +11,7 @@ Progressive Web App (PWA) del juego Whac-A-Mole. Te permite jugar al juego de go
 ## Demo
 Para probar [la PWA aquí](https://whacamole-service.onrender.com/). Se encuentra alojada en Render Server.
 NOTA: si se visualiza desde Chrome, activar inspector y tamaño mobile.
-
+Es muy útil también usar una pestaña de incognito si se ha visualizado otras veces pues tiene gran parte de carga en navegador.
 
 
 

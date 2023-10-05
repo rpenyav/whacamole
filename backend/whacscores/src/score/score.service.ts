@@ -13,6 +13,6 @@ export class ScoreService {
   }
 
   async findAll(): Promise<Score[]> {
-    return this.scoreModel.find().exec();
+    return this.scoreModel.find().sort({ score: -1 }).exec();
   }
 }

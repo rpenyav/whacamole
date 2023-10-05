@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useManageScore } from "./useManageScore";
+import { useOnlineStatus } from "./useOnlineStatus";
 
 interface DifficultyConfig {
   time: number;
@@ -13,12 +15,13 @@ interface Difficulties {
 
 const useGameLogic = () => {
   const userName = localStorage.getItem("userName");
-
+  const isOnline = useOnlineStatus();
   const [score, setScore] = useState<number>(0);
   const [difficulty, setDifficulty] = useState<string>("Bajo");
   const [activeMoleIndex, setActiveMoleIndex] = useState<number>(-1);
   const [isGamePaused, setGamePaused] = useState<boolean>(true);
   const [timeLeft, setTimeLeft] = useState<number>(120);
+  const { updateScoreMutation } = useManageScore();
 
   const changeDifficulty = (newDifficulty: string) => {
     setDifficulty(newDifficulty);
@@ -70,10 +73,24 @@ const useGameLogic = () => {
 
             Swal.fire({
               title: "Game Over",
-              text: `Your final score: ${localStorage.getItem("gameScore")}`,
+              text: `Your final score: ${score}`,
               icon: "info",
               confirmButtonText: "Play again",
             }).then((result) => {
+              if (isOnline) {
+                if (userName !== null) {
+                  updateScoreMutation.mutate({ userName, score });
+                }
+              } else {
+                // Si no hay conexión a Internet, muestra un mensaje al usuario.
+                Swal.fire({
+                  title: "No internet connection",
+                  text: "Your score will be saved locally and synchronized when you're online.",
+                  icon: "warning",
+                  confirmButtonText: "OK",
+                });
+              }
+
               if (result.isConfirmed) {
                 localStorage.removeItem("gameScore");
                 resetGame();

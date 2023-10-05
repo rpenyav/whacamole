@@ -1,35 +1,19 @@
 import { FC } from "react";
 import Layout from "../layout/Layout";
-import {
-  Grid,
-  ScoreBoard,
-  GameControls,
-  DifficultySelector,
-  ButtonRounded,
-} from "../components/index";
+import { ButtonRounded } from "../components/index";
 import useGameLogic from "../hooks/useGameLogic";
-import { formatTime } from "../helpers/formatTime";
 import { useNavigate } from "react-router-dom";
+import { ScoreData, useManageScore } from "../hooks/useManageScore";
+import { Score, useScores } from "../hooks/useScores";
 
 const ScoresPage: FC = () => {
-  const {
-    userName,
-    score,
-    difficulty,
-    changeDifficulty,
-    activeMoleIndex,
-    isGamePaused,
-    handleHit,
-    toggleGamePause,
-    timeLeft,
-  } = useGameLogic();
+  const { userName } = useGameLogic();
   const navigate = useNavigate();
-  const formattedTime = formatTime(timeLeft);
-  const isWarning = timeLeft <= 20; //cambia de color cuand oquedan 20 segundos
-
   const handleGotoGame = () => {
     navigate("/game");
   };
+
+  const scores = useScores();
 
   return (
     <Layout>
@@ -38,7 +22,29 @@ const ScoresPage: FC = () => {
         Fame
       </h3>
 
-      <div className="card ms-3 me-3 pt-3 pb-3">scores</div>
+      <div className="card ms-5 me-5 pt-3 pb-3">
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">Username</th>
+              <th scope="col">Score</th>
+              <th scope="col">Created At</th>
+            </tr>
+          </thead>
+          <tbody>
+            {scores.map((score: Score, index: number) => (
+              <tr key={index}>
+                <td>
+                  <span className="name-user">{score.userName}</span>
+                </td>
+                <td>{score.score}</td>
+                <td>{new Date(score.createdAt).toLocaleString()}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
       <div className="d-flex justify-content-center mt-4">
         <div className="col-2">
           <ButtonRounded

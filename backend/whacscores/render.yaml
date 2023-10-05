@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: nest-backend
+    repo: https://github.com/rpenyav/whacamole
+    branch: main
+    env: node
+    workingDirectory: backend/whacscores
+    buildCommand: npm install && npm run build
+    startCommand: npm start

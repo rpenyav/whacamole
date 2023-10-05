@@ -20,7 +20,9 @@ const useGameLogic = () => {
   const [difficulty, setDifficulty] = useState<string>("Bajo");
   const [activeMoleIndex, setActiveMoleIndex] = useState<number>(-1);
   const [isGamePaused, setGamePaused] = useState<boolean>(true);
-  const [timeLeft, setTimeLeft] = useState<number>(120);
+  const [timeLeft, setTimeLeft] = useState<number>(10);
+  const [hasUpdatedScore, setHasUpdatedScore] = useState<boolean>(false);
+
   const { updateScoreMutation } = useManageScore();
 
   const changeDifficulty = (newDifficulty: string) => {
@@ -66,20 +68,25 @@ const useGameLogic = () => {
 
       countdownTimer = setInterval(() => {
         setTimeLeft((prevTimeLeft) => {
-          if (prevTimeLeft <= 0) {
+          if (prevTimeLeft <= 0 && !hasUpdatedScore) {
             setGamePaused(true);
             clearInterval(moleTimer);
             clearInterval(countdownTimer);
 
             Swal.fire({
               title: "Game Over",
-              text: `Your final score: ${score}`,
+              text: `Your final score: ${localStorage.getItem("gameScore")}`,
               icon: "info",
               confirmButtonText: "Play again",
             }).then((result) => {
               if (isOnline) {
                 if (userName !== null) {
-                  updateScoreMutation.mutate({ userName, score });
+                  const scoreString = localStorage.getItem("gameScore");
+                  const score = parseInt(scoreString!, 10);
+                  if (!hasUpdatedScore) {
+                    updateScoreMutation.mutate({ userName, score });
+                    setHasUpdatedScore(true); // Marca que ya se ha actualizado
+                  }
                 }
               } else {
                 // Si no hay conexión a Internet, muestra un mensaje al usuario.
@@ -106,13 +113,13 @@ const useGameLogic = () => {
       clearInterval(moleTimer);
       clearInterval(countdownTimer);
     };
-  }, [difficulty, isGamePaused]);
+  }, [difficulty, isGamePaused, hasUpdatedScore]);
 
   const handleHit = () => {
     const { points } = difficulties[difficulty];
     setScore((prevScore) => {
       const newScore = prevScore + points;
-      // localStorage.setItem("gameScore", newScore.toString());
+      localStorage.setItem("gameScore", newScore.toString());
       return newScore;
     });
   };

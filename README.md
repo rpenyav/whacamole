@@ -63,8 +63,12 @@ Nota sobre los test: el test del hook **useGameLogic.ts** produce un warning: **
 - Disponbible sin conexión.
 
 ## Backend
-Se ha incluido un backend creado con NestJS para poder almacenar la puntuación en una BBDD MOngoDB utilizando el Cloud Atlas.
+Se ha incluido un backend creado con NestJS para poder almacenar la puntuación en una BBDD MongoDB utilizando el Cloud Atlas.
+Se incluye documentación en el enlace.
 
+### IMPORTANTE: 
+
+La PWA recoge los datos en la primera carga y posteriormente los muestra indexados con indexedDB. Sin embargo, no puede postear los resultados sin conexión por razones obvias, por lo que muestra un mensaje Alert.
 
 ## Documentación exhaustiva
 

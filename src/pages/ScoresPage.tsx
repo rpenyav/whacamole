@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import Layout from "../layout/Layout";
 import { ButtonRounded } from "../components/index";
 import useGameLogic from "../hooks/useGameLogic";
 import { useNavigate } from "react-router-dom";
-import { ScoreData, useManageScore } from "../hooks/useManageScore";
+
 import { Score, useScores } from "../hooks/useScores";
 
 const ScoresPage: FC = () => {
@@ -22,7 +22,7 @@ const ScoresPage: FC = () => {
         Fame
       </h3>
 
-      <div className="card ms-5 me-5 pt-3 pb-3">
+      <div className="card ms-5 me-5 pt-3 pb-3 custom-scrollb">
         <table className="table">
           <thead>
             <tr>

@@ -19,7 +19,6 @@ const openIndexedDB = async () => {
 
     request.onsuccess = () => resolve(request.result);
 
-    // Manejar el error utilizando la función 'reject'
     request.onerror = (event) => {
       reject((event.target as IDBOpenDBRequest).error);
     };

@@ -70,6 +70,10 @@ Se incluye documentación en el enlace.
 
 La PWA recoge los datos en la primera carga y posteriormente los muestra indexados con indexedDB. Sin embargo, no puede postear los resultados sin conexión por razones obvias, por lo que muestra un mensaje Alert.
 
+## Acerca del servicio de host clouding
+
+Como usamos Render Server, siendo un servicio gratuito para BETA, es muy probable que el servidor permanezca dormido sin uso, por lo que quizá después de la primera carga haya que esperar un poco a que reaccione.
+
 ## Documentación exhaustiva
 
 - Ver la [documentación acerca](https://rafapenya.gitbook.io/whac-a-mole/) del proceso de desarrollo.

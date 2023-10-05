@@ -62,7 +62,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.22.20",
     "@types/react-router-dom": "^5.3.3",
-    "@types/react-transition-group": "^4.4.7"
+    "@types/react-transition-group": "^4.4.7",
+    "babel-jest": "^29.7.0"
   }
 }

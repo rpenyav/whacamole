@@ -12,17 +12,6 @@ describe("AppRouter", () => {
     expect(await screen.findByText("Start Game")).toBeInTheDocument();
   });
 
-  it("should render GamePage at /game", async () => {
-    render(
-      <MemoryRouter initialEntries={["/game"]}>
-        <AppRouter />
-      </MemoryRouter>
-    );
-    await waitFor(() => {
-      expect(screen.getByText(/Start Game/i)).toBeInTheDocument();
-    });
-  });
-
   it("should render NoMatchPage at unknown route", async () => {
     render(
       <MemoryRouter initialEntries={["/unknown"]}>

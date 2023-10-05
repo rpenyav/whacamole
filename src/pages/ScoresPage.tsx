@@ -46,7 +46,7 @@ const ScoresPage: FC = () => {
       </div>
 
       <div className="d-flex justify-content-center mt-4">
-        <div className="col-2">
+        <div className="col-4">
           <ButtonRounded
             isActive={true}
             disabled={false}

@@ -19,7 +19,7 @@ const useGameLogic = () => {
   const [difficulty, setDifficulty] = useState<string>("Bajo");
   const [activeMoleIndex, setActiveMoleIndex] = useState<number>(-1);
   const [isGamePaused, setGamePaused] = useState<boolean>(true);
-  const [timeLeft, setTimeLeft] = useState<number>(10);
+  const [timeLeft, setTimeLeft] = useState<number>(120);
   const [hasUpdatedScore, setHasUpdatedScore] = useState<boolean>(false);
 
   const { updateScoreMutation } = useManageScore();

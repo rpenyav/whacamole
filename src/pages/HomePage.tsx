@@ -6,6 +6,7 @@ import { ButtonRounded } from "../components/";
 
 const Home: React.FC = () => {
   useEffect(() => {
+    localStorage.removeItem("gameScore");
     document.documentElement.style.setProperty(
       "--background-image",
       `url(${topo})`

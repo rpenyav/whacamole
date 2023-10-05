@@ -2,7 +2,7 @@ import { FC, ReactNode, useEffect } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { backFlores, exit } from "../assets";
+import { backFlores, exit, ribbon } from "../assets";
 
 interface LayoutProps {
   children: ReactNode;
@@ -26,6 +26,10 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   const handleLogout = () => {
     localStorage.clear();
     navigate("/");
+  };
+
+  const handleGotoWallOfFame = () => {
+    navigate("/scores");
   };
 
   useEffect(() => {
@@ -53,15 +57,24 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           </motion.div>
         </AnimatePresence>
       </main>
-      <footer className="d-flex justify-content-center pb-3">
-        <div>rpenyav 2023</div>
+      <footer className="d-flex justify-content-between pb-3 ps-4 pe-4">
         <div>
+          rpenyav 2023
           <img
             onClick={handleLogout}
             className="ms-3 icon-exit"
             src={exit}
             alt="exit/disconnect"
           />
+        </div>
+
+        <div className="pintetpointer" onClick={handleGotoWallOfFame}>
+          <img
+            className="ms-3 icon-exit"
+            src={ribbon}
+            alt="got to wall of fame"
+          />{" "}
+          View Wall of fame
         </div>
       </footer>
     </div>

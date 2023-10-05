@@ -62,7 +62,11 @@ Nota sobre los test: el test del hook **useGameLogic.ts** produce un warning: **
 - Código SOLID filtrado con EsLint salvo algunas excepciones.
 - Disponbible sin conexión.
 
+## Backend
+Se ha incluido un backend creado con NestJS para poder almacenar la puntuación en una BBDD MOngoDB utilizando el Cloud Atlas.
+
+
 ## Documentación exhaustiva
 
-- Ver la [documentación acerca](https://app.gitbook.com/o/f6sc898kolNIxiLAEsFn/s/ZkSp7jFGr2u2Ev4xSokA/) del proceso de desarrollo.
+- Ver la [documentación acerca](https://rafapenya.gitbook.io/whac-a-mole/) del proceso de desarrollo.
 

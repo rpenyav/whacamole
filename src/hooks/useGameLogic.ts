@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useManageScore } from "./useManageScore";
 import { useOnlineStatus } from "./useOnlineStatus";
@@ -85,11 +84,11 @@ const useGameLogic = () => {
                   const score = parseInt(scoreString!, 10);
                   if (!hasUpdatedScore) {
                     updateScoreMutation.mutate({ userName, score });
-                    setHasUpdatedScore(true); // Marca que ya se ha actualizado
+                    setHasUpdatedScore(true);
                   }
                 }
               } else {
-                // Si no hay conexión a Internet, muestra un mensaje al usuario.
+                //Si no hay conexión a Internet
                 Swal.fire({
                   title: "No internet connection",
                   text: "Your score will be saved locally and synchronized when you're online.",

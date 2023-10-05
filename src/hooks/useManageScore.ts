@@ -8,7 +8,6 @@ export interface ScoreData {
 
 export const useManageScore = () => {
   const updateScoreMutation = useMutation((newData: ScoreData) => {
-    console.log("Contenido de newData:", newData); // Agrega esta línea para imprimir newData
     return axiosInstance.post("/score", newData);
   });
 

@@ -11,7 +11,7 @@ Progressive Web App (PWA) del juego Whac-A-Mole. Te permite jugar al juego de go
 ## Demo
 Para probar [la PWA aquí](https://whacamole-service.onrender.com/). Se encuentra alojada en Render Server.
 NOTA: si se visualiza desde Chrome, activar inspector y tamaño mobile.
-
+Es muy útil también usar una pestaña de incognito si se ha visualizado otras veces pues tiene gran parte de carga en navegador.
 
 
 
@@ -63,8 +63,16 @@ Nota sobre los test: el test del hook **useGameLogic.ts** produce un warning: **
 - Disponbible sin conexión.
 
 ## Backend
-Se ha incluido un backend creado con NestJS para poder almacenar la puntuación en una BBDD MOngoDB utilizando el Cloud Atlas.
+Se ha incluido un backend creado con NestJS para poder almacenar la puntuación en una BBDD MongoDB utilizando el Cloud Atlas.
+Se incluye documentación en el enlace.
 
+### IMPORTANTE: 
+
+La PWA recoge los datos en la primera carga y posteriormente los muestra indexados con indexedDB. Sin embargo, no puede postear los resultados sin conexión por razones obvias, por lo que muestra un mensaje Alert.
+
+## Acerca del servicio de host clouding
+
+Como usamos Render Server, siendo un servicio gratuito para BETA, es muy probable que el servidor permanezca dormido sin uso, por lo que quizá después de la primera carga haya que esperar un poco a que reaccione.
 
 ## Documentación exhaustiva
 

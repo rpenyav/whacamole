@@ -49,10 +49,24 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
   height: 500px;
   text-align: center;
   padding-top: 55%;
+}
+
+@media only screen and (min-width: 451px) {
+  .back-topo {
+    width: 500px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 0 auto;
+    height: 700px;
+    padding-top: 300px;
+    background-image: var(--background-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .back-flowers {
